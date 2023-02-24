@@ -3,6 +3,8 @@
 OPEN AI ECHO BOT
 
 This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
+Once created, deploy as Azure App Service integrated Azure Bot Service
+
 
 ## Prerequisites
 
