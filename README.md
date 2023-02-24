@@ -1,4 +1,4 @@
-﻿# EchoBot
+﻿# GPT3 EchoBot
 
 OPEN AI ECHO BOT
 
