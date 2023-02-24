@@ -29,7 +29,7 @@ namespace Microsoft.BotBuilderSamples.Bots
             var prompt = turnContext.Activity.Text;
             var conversationHistory = string.Empty;
             
-            var openaiResponse = await PostDataToEndpoint(openaiUrl,prompt);
+            var openaiResponse = await PostDataToEndpoint("",prompt);
 
             conversationHistory += $"User: {turnContext.Activity.Text}\nChatbot: {openaiResponse.choices[0].text}\n";
             var replyText = $"{openaiResponse.choices[0].text} [~{openaiResponse.usage.total_tokens} tokens]";
