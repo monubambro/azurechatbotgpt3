@@ -52,6 +52,8 @@ namespace Microsoft.BotBuilderSamples.Bots
 
             _httpClient = new HttpClient();
             var content = new StringContent(json, Encoding.UTF8, "application/json");
+            
+            //TODO PUT YOUR API KEY
             _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + "");
             var response = await _httpClient.PostAsync(" https://api.openai.com/v1/completions", content);
 
