@@ -29,13 +29,6 @@ namespace Microsoft.BotBuilderSamples.Bots
             var prompt = turnContext.Activity.Text;
             var conversationHistory = string.Empty;
             
-            var headers = new Dictionary<string, string>()
-            {
-                { "Content-Type", "application/json" },
-                { "api-key", "" },
-            };
-
-            var openaiUrl = "https://api.openai.com/v1/completions";
             var openaiResponse = await PostDataToEndpoint(openaiUrl,prompt);
 
             conversationHistory += $"User: {turnContext.Activity.Text}\nChatbot: {openaiResponse.choices[0].text}\n";
