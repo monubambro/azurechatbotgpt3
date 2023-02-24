@@ -29,7 +29,7 @@ namespace Microsoft.BotBuilderSamples.Bots
             var prompt = turnContext.Activity.Text;
             var conversationHistory = string.Empty;
             
-            var openaiResponse = await PostDataToEndpoint("",prompt);
+            var openaiResponse = await PostDataToEndpoint(prompt);
 
             conversationHistory += $"User: {turnContext.Activity.Text}\nChatbot: {openaiResponse.choices[0].text}\n";
             var replyText = $"{openaiResponse.choices[0].text} [~{openaiResponse.usage.total_tokens} tokens]";
@@ -38,7 +38,7 @@ namespace Microsoft.BotBuilderSamples.Bots
                        
         }
 
-        private async Task<dynamic> PostDataToEndpoint(string url,string prompt1)
+        private async Task<dynamic> PostDataToEndpoint(string prompt1)
         {
                       
 
